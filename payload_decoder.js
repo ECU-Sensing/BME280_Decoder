@@ -5,12 +5,14 @@ function Decoder(bytes, port) {
     // Decode bytes to int
     var celciusInt = (bytes[1] << 8) | bytes[2];
     var humidInt = (bytes[3] << 8) | bytes[4];
+    var pressInt = (bytes[5] << 8) | bytes[6];
     
     // Decode Feather ID
     decoded.featherID = bytes[0]
     // Decode int to float
     decoded.celcius = celciusInt / 100;
     decoded.humid = humidInt / 100;
+    decoded.pressure = pressInt /100;
   
     return decoded;
   }
