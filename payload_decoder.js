@@ -12,7 +12,7 @@ function Decoder(bytes, port) {
     // Decode int to float
     decoded.celcius = celciusInt / 100;
     decoded.humid = humidInt / 100;
-    decoded.pressure = pressInt /100;
+    decoded.pressure = pressInt /1000;
   
     return decoded;
   }
